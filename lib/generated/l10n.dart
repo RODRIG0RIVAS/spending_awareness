@@ -345,6 +345,36 @@ class S {
     );
   }
 
+  /// `This is an app for get some awareness about your own spending, it will show you how many money you spend exponentially.`
+  String get lbl_welcome_screen_propose_explanation {
+    return Intl.message(
+      'This is an app for get some awareness about your own spending, it will show you how many money you spend exponentially.',
+      name: 'lbl_welcome_screen_propose_explanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Welcome to spending awareness`
+  String get lbl_welcome_screen_spending_awareness {
+    return Intl.message(
+      'Welcome to spending awareness',
+      name: 'lbl_welcome_screen_spending_awareness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Swipe`
+  String get lbl_swipe {
+    return Intl.message(
+      'Swipe',
+      name: 'lbl_swipe',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Week`
   String get btn_toogle_selectReceiptMethod_week {
     return Intl.message(

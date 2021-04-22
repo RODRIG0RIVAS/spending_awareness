@@ -31,6 +31,9 @@
     "lbl_totalInstallmentCost": "Custo total do parcelamento",
     "lbl_toBuyItAtTotalValueYouHaveToWork": "Para o valor total, você terá de trabalhar por",
     "lbl_youSpendInAweek": "Você gasta, por semana",
+    "lbl_welcome_screen_propose_explanation": "Esse é o aplicativo para ter alguma noção sobre seus próprios gastos, isto mostrará o quanto de dinheiro você gasta, ou vai gastar, exponencialmente.",
+    "lbl_welcome_screen_spending_awareness": "Bem vindo ao conscientizador de gastos",
+    "lbl_swipe": "Deslize",
 
     "btn_toogle_selectReceiptMethod_week": "Semana",
     "btn_toogle_selectReceiptMethod_month": "Mês",

@@ -11,6 +11,7 @@ import 'package:spending_awareness/app/app_widget.dart';
 import 'package:spending_awareness/app/modules/screens/home/home_module.dart';
 
 import 'modules/screens/my_time_value/my_time_value_module.dart';
+import 'modules/screens/welcome/welcome_module.dart';
 
 class AppModule extends MainModule {
   @override
@@ -26,10 +27,13 @@ class AppModule extends MainModule {
             module: WorthToBuyModule(), transition: TransitionType.fadeIn),
         ModularRouter(MyRouterNames.putSalary,
             module: PutSalaryModule(), transition: TransitionType.fadeIn),
-        ModularRouter(Modular.initialRoute,
+        ModularRouter(/*Modular.initialRoute*/ MyRouterNames.splash,
             module: SplashModule(), transition: TransitionType.fadeIn),
         ModularRouter(MyRouterNames.creditCardImpact,
-            module: CreditCartImpactModule(), transition: TransitionType.fadeIn)
+            module: CreditCartImpactModule(),
+            transition: TransitionType.fadeIn),
+        ModularRouter(/*MyRouterNames.welcome*/ Modular.initialRoute,
+            module: WelcomeModule(), transition: TransitionType.fadeIn),
       ];
 
   @override

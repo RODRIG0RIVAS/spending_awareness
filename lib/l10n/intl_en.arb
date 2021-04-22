@@ -31,6 +31,9 @@
     "lbl_totalInstallmentCost": "Total installment cost",
     "lbl_toBuyItAtTotalValueYouHaveToWork": "To buy it at total value, you have to work",
     "lbl_youSpendInAweek": "You spend in a week",
+    "lbl_welcome_screen_propose_explanation": "This is an app for get some awareness about your own spending, it will show you how many money you spend exponentially.",
+    "lbl_welcome_screen_spending_awareness": "Welcome to spending awareness",
+    "lbl_swipe": "Swipe",
 
     "btn_toogle_selectReceiptMethod_week": "Week",
     "btn_toogle_selectReceiptMethod_month": "Month",
