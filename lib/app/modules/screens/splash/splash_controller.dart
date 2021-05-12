@@ -27,8 +27,7 @@ abstract class _SplashControllerBase with Store {
       await Future.delayed(Duration(milliseconds: 1000)).whenComplete(() {
         if (_localDatabase.firstExecution) {
           _localDatabase.putFirstExecution(false);
-          Modular.to
-              .pushReplacementNamed(MyRouterNames.putSalary, arguments: true);
+          Modular.to.pushReplacementNamed(MyRouterNames.welcome);
         } else {
           Modular.to.pushReplacementNamed(MyRouterNames.home);
         }

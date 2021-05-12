@@ -53,7 +53,7 @@ class _SplashPageState extends ModularState<SplashPage, SplashController> {
               alignment: Alignment.center,
               child: Text(S.of(context).lbl_title,
                   style: TextStyle(
-                      fontSize: 35.0,
+                      fontSize: 28.0,
                       color: Colors.white,
                       fontWeight: FontWeight.w500)),
             );
@@ -69,7 +69,7 @@ class _SplashPageState extends ModularState<SplashPage, SplashController> {
               return TweenAnimationBuilder(
                 duration: Duration(milliseconds: 800),
                 curve: Curves.easeInOut,
-                tween: Tween<double>(begin: 35.0, end: 20.0),
+                tween: Tween<double>(begin: 28.0, end: 20.0),
                 builder: ((context, fontSizeValue, widget) {
                   return TweenAnimationBuilder(
                     duration: Duration(milliseconds: 800),

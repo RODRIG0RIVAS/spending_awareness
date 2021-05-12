@@ -21,7 +21,8 @@ class Final extends StatelessWidget {
           color: Colors.green,
           iconSize: MediaQuery.of(context).size.width * 0.5,
           onPressed: () {
-            Modular.to.pushReplacementNamed(MyRouterNames.splash);
+            Modular.to
+                .pushReplacementNamed(MyRouterNames.putSalary, arguments: true);
           },
         ));
   }

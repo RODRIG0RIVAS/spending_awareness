@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_intro/flutter_intro.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
@@ -22,7 +21,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends ModularState<HomePage, HomeController> {
   //use 'controller' variable to access controller
 
-  final double fontSize = 23.0;
+  final double endFontSize = 20.0;
 
   final Intro intro = Intro(
     noAnimation: false,
@@ -75,14 +74,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
   AppBar getAppBar() {
     return AppBar(
-        title: Text(S.of(context).lbl_title),
-        elevation: 0.0,
-        backgroundColor: Colors.green,
-        centerTitle: true,
-        leading: Container());
+      title: Text(S.of(context).lbl_title),
+      elevation: 0.0,
+      backgroundColor: Colors.green,
+      centerTitle: true,
+    );
   }
 
-  Widget myTimeValueButton() {
+  Widget myTimeValueButton(double fontSize) {
     return Container(
       key: intro.keys[0],
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
@@ -105,7 +104,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     );
   }
 
-  Widget worthToBuyButton() {
+  Widget worthToBuyButton(double fontSize) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
       width: MediaQuery.of(context).size.width,
@@ -135,7 +134,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     );
   }
 
-  Widget creditCardImpactButton() {
+  Widget creditCardImpactButton(double fontSize) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
       width: MediaQuery.of(context).size.width,
@@ -165,7 +164,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     );
   }
 
-  Widget changeSalaryButton() {
+  Widget changeSalaryButton(double fontSize) {
     return Container(
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 30),
       width: MediaQuery.of(context).size.width,
@@ -198,6 +197,24 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
     );
   }
 
+  Widget getButtons() {
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: endFontSize,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+              child: Column(
+            children: [
+              myTimeValueButton(fontSize),
+              worthToBuyButton(fontSize),
+              creditCardImpactButton(fontSize),
+              changeSalaryButton(fontSize)
+            ],
+          ));
+        }));
+  }
+
   Widget getWhiteContainerWidget(EdgeInsets edgeInsets) {
     return SingleChildScrollView(
       child: Container(
@@ -206,13 +223,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(50.0)),
         child: Column(
-          children: [
-            iWantToGetAwarenessOfLabel(),
-            myTimeValueButton(),
-            worthToBuyButton(),
-            creditCardImpactButton(),
-            changeSalaryButton()
-          ],
+          children: [iWantToGetAwarenessOfLabel(), getButtons()],
         ),
       ),
     );

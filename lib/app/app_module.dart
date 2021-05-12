@@ -27,13 +27,14 @@ class AppModule extends MainModule {
             module: WorthToBuyModule(), transition: TransitionType.fadeIn),
         ModularRouter(MyRouterNames.putSalary,
             module: PutSalaryModule(), transition: TransitionType.fadeIn),
-        ModularRouter(/*Modular.initialRoute*/ MyRouterNames.splash,
+        ModularRouter(Modular.initialRoute /*MyRouterNames.splash*/,
             module: SplashModule(), transition: TransitionType.fadeIn),
         ModularRouter(MyRouterNames.creditCardImpact,
             module: CreditCartImpactModule(),
             transition: TransitionType.fadeIn),
-        ModularRouter(/*MyRouterNames.welcome*/ Modular.initialRoute,
-            module: WelcomeModule(), transition: TransitionType.fadeIn),
+        ModularRouter(MyRouterNames.welcome /*Modular.initialRoute*/,
+            module: WelcomeModule(),
+            customTransition: myScaleWithFadeTransition),
       ];
 
   @override
@@ -41,7 +42,7 @@ class AppModule extends MainModule {
 
   static Inject get to => Inject<AppModule>.of();
 
-  /*CustomTransition get myScaleWithFadeTransition => CustomTransition(
+  CustomTransition get myScaleWithFadeTransition => CustomTransition(
         transitionDuration: Duration(milliseconds: 300),
         transitionBuilder: (context, animation, secondaryAnimation, child) {
           var begin = 0.0;
@@ -59,5 +60,5 @@ class AppModule extends MainModule {
             ),
           );
         },
-      );*/
+      );
 }

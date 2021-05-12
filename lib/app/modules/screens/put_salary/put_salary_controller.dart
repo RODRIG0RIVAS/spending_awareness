@@ -22,7 +22,6 @@ abstract class _PutSalaryControllerBase with Store {
   }
 
   void putSalaryInDatabase(double value) {
-    print("VALOR DO SALARIO: $value");
     _localDatabase.putSalary(value);
     _localDatabase.putHourWorth(
         (value / _localDatabase.daysInPeriod) / _localDatabase.hoursInDay);

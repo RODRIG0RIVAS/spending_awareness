@@ -19,7 +19,7 @@ typedef String MessageIfAbsent(String messageStr, List<dynamic> args);
 class MessageLookup extends MessageLookupByLibrary {
   String get localeName => 'pt';
 
-  static m0(period) => "Você trabalha por ${period} horas por";
+  static m0(period) => "${period} horas trabalhadas por";
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static _notInlinedMessages(_) => <String, Function> {
@@ -40,7 +40,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lbl_add_money" : MessageLookupByLibrary.simpleMessage("Adicione quanto você recebe"),
     "lbl_add_money_explanation" : MessageLookupByLibrary.simpleMessage("e clique em ok"),
     "lbl_and" : MessageLookupByLibrary.simpleMessage("e"),
-    "lbl_choice_your_earn_type" : MessageLookupByLibrary.simpleMessage("Escolha o modo de como você recebe o salário"),
+    "lbl_choice_your_earn_type" : MessageLookupByLibrary.simpleMessage("Selecione como você recebe o salário"),
     "lbl_clickTheButtonAboveToContinue" : MessageLookupByLibrary.simpleMessage("Clique no botão acima para continuar"),
     "lbl_day" : MessageLookupByLibrary.simpleMessage("dia"),
     "lbl_forHowManyDaysInAweek" : MessageLookupByLibrary.simpleMessage("Por quantos dias na semana?"),
@@ -52,22 +52,23 @@ class MessageLookup extends MessageLookupByLibrary {
     "lbl_howManyTimesAweekDoYouBuyIt" : MessageLookupByLibrary.simpleMessage("Em quantas vezes na semana você gasta com isso?"),
     "lbl_howMuchTheItemCosts" : MessageLookupByLibrary.simpleMessage("Quanto o produto ou serviço custa?"),
     "lbl_iReceive" : MessageLookupByLibrary.simpleMessage("Eu recebo"),
-    "lbl_impactOfCreditCardInstallment" : MessageLookupByLibrary.simpleMessage("Impacto do parcelamento no cartão de crédito"),
+    "lbl_impactOfCreditCardInstallment" : MessageLookupByLibrary.simpleMessage("Impacto do cartão de crédito"),
     "lbl_inHowManyInstallments" : MessageLookupByLibrary.simpleMessage("Em quantas parcelas?"),
+    "lbl_knowYourMoneyWorth" : MessageLookupByLibrary.simpleMessage("Saiba o valor do seu dinheiro"),
     "lbl_minute" : MessageLookupByLibrary.simpleMessage("minuto"),
     "lbl_month" : MessageLookupByLibrary.simpleMessage("mês"),
     "lbl_or" : MessageLookupByLibrary.simpleMessage("ou"),
     "lbl_putYourSalaryHere" : MessageLookupByLibrary.simpleMessage("Coloque seu salário abaixo"),
     "lbl_realSalaryInNextMonth" : MessageLookupByLibrary.simpleMessage("Salário real no próximo mês"),
-    "lbl_selectReceiptMethod" : MessageLookupByLibrary.simpleMessage("Selecione o método de recebimento"),
+    "lbl_selectReceiptMethod" : MessageLookupByLibrary.simpleMessage("Você recebe por?"),
     "lbl_swipe" : MessageLookupByLibrary.simpleMessage("Deslize"),
     "lbl_title" : MessageLookupByLibrary.simpleMessage("Conscientizador de gastos"),
-    "lbl_toBuyItAtTotalValueYouHaveToWork" : MessageLookupByLibrary.simpleMessage("Para o valor total, você terá de trabalhar por"),
+    "lbl_toBuyItAtTotalValueYouHaveToWork" : MessageLookupByLibrary.simpleMessage("Tempo de trabalho para pagar"),
     "lbl_toBuyItOnceYouHaveToWork" : MessageLookupByLibrary.simpleMessage("Compre uma vez e trabalhe por"),
     "lbl_totalInstallmentCost" : MessageLookupByLibrary.simpleMessage("Custo total do parcelamento"),
     "lbl_week" : MessageLookupByLibrary.simpleMessage("semana"),
     "lbl_welcome_screen_propose_explanation" : MessageLookupByLibrary.simpleMessage("Esse é o aplicativo para ter alguma noção sobre seus próprios gastos, isto mostrará o quanto de dinheiro você gasta, ou vai gastar, exponencialmente."),
-    "lbl_welcome_screen_spending_awareness" : MessageLookupByLibrary.simpleMessage("Bem vindo ao conscientizador de gastos"),
+    "lbl_welcome_screen_spending_awareness" : MessageLookupByLibrary.simpleMessage("Bem vindo"),
     "lbl_worthToBuy" : MessageLookupByLibrary.simpleMessage("Vale a pena comprar?"),
     "lbl_youSpendInAweek" : MessageLookupByLibrary.simpleMessage("Você gasta, por semana"),
     "lbl_youWorkForXhoursA" : m0,
