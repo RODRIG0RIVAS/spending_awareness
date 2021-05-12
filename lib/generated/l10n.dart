@@ -325,10 +325,10 @@ class S {
     );
   }
 
-  /// `To buy it at total value, you have to work`
+  /// `To buy at full value, work for`
   String get lbl_toBuyItAtTotalValueYouHaveToWork {
     return Intl.message(
-      'To buy it at total value, you have to work',
+      'To buy at full value, work for',
       name: 'lbl_toBuyItAtTotalValueYouHaveToWork',
       desc: '',
       args: [],
@@ -360,6 +360,66 @@ class S {
     return Intl.message(
       'Welcome to spending awareness',
       name: 'lbl_welcome_screen_spending_awareness',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Choose how you earn your salary`
+  String get lbl_choice_your_earn_type {
+    return Intl.message(
+      'Choose how you earn your salary',
+      name: 'lbl_choice_your_earn_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You can choose Weekly or Monthly.`
+  String get lbl_get_type {
+    return Intl.message(
+      'You can choose Weekly or Monthly.',
+      name: 'lbl_get_type',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add how much you get`
+  String get lbl_add_money {
+    return Intl.message(
+      'Add how much you get',
+      name: 'lbl_add_money',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `and click ok`
+  String get lbl_add_money_explanation {
+    return Intl.message(
+      'and click ok',
+      name: 'lbl_add_money_explanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Know your money's worth`
+  String get lbl_knowYourMoneyWorth {
+    return Intl.message(
+      'Know your money\'s worth',
+      name: 'lbl_knowYourMoneyWorth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click the button above to continue`
+  String get lbl_clickTheButtonAboveToContinue {
+    return Intl.message(
+      'Click the button above to continue',
+      name: 'lbl_clickTheButtonAboveToContinue',
       desc: '',
       args: [],
     );

@@ -25,7 +25,7 @@ class AppWidget extends StatelessWidget {
       navigatorKey: Modular.navigatorKey,
       title: 'Spending Awareness',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,

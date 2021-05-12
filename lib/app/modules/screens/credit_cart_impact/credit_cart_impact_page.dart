@@ -36,15 +36,15 @@ class _CreditCartImpactPageState
     );
   }
 
-  Widget installmentsImpactLabel() {
+  Widget installmentsImpactLabel(double fontSize) {
     return Container(
       margin: const EdgeInsets.only(top: 15.0),
       child: Text(S.of(context).lbl_impactOfCreditCardInstallment,
-          style: TextStyle(fontSize: 18.0)),
+          style: TextStyle(fontSize: fontSize)),
     );
   }
 
-  Widget hourWorthWidget() {
+  Widget hourWorthWidget(double fontSize) {
     return Container(
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
@@ -56,7 +56,7 @@ class _CreditCartImpactPageState
               alignment: Alignment.centerLeft,
               child: Text(
                 "${S.of(context).lbl_yourHourWorth}",
-                style: TextStyle(color: Colors.black, fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: fontSize),
               ),
             ),
           ),
@@ -69,7 +69,7 @@ class _CreditCartImpactPageState
                     : controller.hourWorth),
                 style: TextStyle(
                     color: Colors.green,
-                    fontSize: 20.0,
+                    fontSize: fontSize,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -79,7 +79,7 @@ class _CreditCartImpactPageState
     );
   }
 
-  Widget dayWorthWidget() {
+  Widget dayWorthWidget(double fontSize) {
     return Container(
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
@@ -91,7 +91,7 @@ class _CreditCartImpactPageState
               alignment: Alignment.centerLeft,
               child: Text(
                 "${S.of(context).lbl_yourDayWorth}",
-                style: TextStyle(color: Colors.black, fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: fontSize),
               ),
             ),
           ),
@@ -103,7 +103,7 @@ class _CreditCartImpactPageState
                     controller.dayWorth.isInfinite ? 0.0 : controller.dayWorth),
                 style: TextStyle(
                     color: Colors.green,
-                    fontSize: 20.0,
+                    fontSize: fontSize,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -163,15 +163,15 @@ class _CreditCartImpactPageState
     );
   }
 
-  Widget salaryInNextMonthWidget() {
+  Widget salaryInNextMonthWidget(double fontSize) {
     double salaryInNextMonth = controller.salaryInNextMonths(
         controller.mySalary, controller.installmentCost);
 
     String formattedValue = MoneyFormated.getMoneyFormated(salaryInNextMonth);
 
-    TextStyle stylePhrase = TextStyle(fontSize: 20.0);
+    TextStyle stylePhrase = TextStyle(fontSize: fontSize);
     TextStyle styleValuePhrase = TextStyle(
-        fontSize: 20.0,
+        fontSize: fontSize,
         color: salaryInNextMonth == controller.mySalary
             ? Colors.green
             : Colors.red,
@@ -204,16 +204,16 @@ class _CreditCartImpactPageState
     );
   }
 
-  Widget totalCostOfTheInstallment() {
+  Widget totalCostOfTheInstallment(double fontSize) {
     double totalCostOfTheInstallment = controller.totalCostOfInstallment(
         controller.installmentCost, controller.installmentCount);
 
     String formattedValue =
         MoneyFormated.getMoneyFormated(totalCostOfTheInstallment);
 
-    TextStyle stylePhrase = TextStyle(fontSize: 20.0);
+    TextStyle stylePhrase = TextStyle(fontSize: fontSize);
     TextStyle styleValuePhrase = TextStyle(
-        fontSize: 20.0, color: Colors.red, fontWeight: FontWeight.bold);
+        fontSize: fontSize, color: Colors.red, fontWeight: FontWeight.bold);
 
     return Container(
       margin: const EdgeInsets.only(
@@ -243,8 +243,8 @@ class _CreditCartImpactPageState
     );
   }
 
-  Widget toBuyItHoursLabel() {
-    TextStyle style = TextStyle(fontSize: 20.0);
+  Widget toBuyItHoursLabel(double fontSize) {
+    TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
         margin: const EdgeInsets.only(top: 15.0),
@@ -252,11 +252,11 @@ class _CreditCartImpactPageState
             style: style));
   }
 
-  Widget isCostsXworkHoursOrXdays() {
+  Widget isCostsXworkHoursOrXdays(double fontSize) {
     String hoursOutput = itCostsXworkHours();
     String daysOutput = itCostsXdays();
 
-    TextStyle style = TextStyle(fontSize: 20.0);
+    TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
         margin: const EdgeInsets.only(bottom: 15.0),
@@ -302,27 +302,57 @@ class _CreditCartImpactPageState
     return output;
   }
 
+  Widget getTitle() {
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: 18.0,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+              child: Column(
+            children: [
+              installmentsImpactLabel(fontSize),
+            ],
+          ));
+        }));
+  }
+
+  //Easier implemented with this method
+  Widget getColumnWidgets() {
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: 20.0,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+              child: Column(
+            children: [
+              hourWorthWidget(fontSize),
+              dayWorthWidget(fontSize),
+              howMuchIsTheInstallmentTextFormField(),
+              inHowManyInstallmentsTextFormField(),
+              salaryInNextMonthWidget(fontSize),
+              totalCostOfTheInstallment(fontSize),
+              toBuyItHoursLabel(fontSize),
+              isCostsXworkHoursOrXdays(fontSize)
+            ],
+          ));
+        }));
+  }
+
   Widget getWhiteContainerWidget(EdgeInsets edgeInsets) {
     return SingleChildScrollView(
       child: Container(
-        width: MediaQuery.of(context).size.width,
-        margin: edgeInsets,
-        decoration: BoxDecoration(
-            color: Colors.white, borderRadius: BorderRadius.circular(50.0)),
-        child: Column(
-          children: [
-            installmentsImpactLabel(),
-            hourWorthWidget(),
-            dayWorthWidget(),
-            howMuchIsTheInstallmentTextFormField(),
-            inHowManyInstallmentsTextFormField(),
-            salaryInNextMonthWidget(),
-            totalCostOfTheInstallment(),
-            toBuyItHoursLabel(),
-            isCostsXworkHoursOrXdays()
-          ],
-        ),
-      ),
+          width: MediaQuery.of(context).size.width,
+          margin: edgeInsets,
+          decoration: BoxDecoration(
+              color: Colors.white, borderRadius: BorderRadius.circular(50.0)),
+          child: Column(
+            children: [
+              getTitle(),
+              getColumnWidgets(),
+            ],
+          )),
     );
   }
 

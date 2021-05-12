@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_intro/flutter_intro.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spending_awareness/app/modules/screens/widgets/my_salary_widget.dart';
@@ -19,6 +21,46 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends ModularState<HomePage, HomeController> {
   //use 'controller' variable to access controller
+
+  final double fontSize = 23.0;
+
+  final Intro intro = Intro(
+    noAnimation: false,
+    stepCount: 1,
+    padding: EdgeInsets.all(8),
+    borderRadius: BorderRadius.all(Radius.circular(4)),
+    widgetBuilder: StepWidgetBuilder.useDefaultTheme(
+      /// Guide page text
+      texts: [
+        'Hello, I\'m Flutter Intro.',
+        /*'I can help you quickly implement the Step By Step guide in the Flutter project.',
+        'My usage is also very simple, you can quickly learn and use it through example and api documentation.',
+        'In order to quickly implement the guidance, I also provide a set of out-of-the-box themes, I wish you all a happy use, goodbye!',*/
+      ],
+
+      /// Button text
+      buttonTextBuilder: (curr, total) {
+        return curr < total - 1 ? 'Next' : 'Finish';
+      },
+
+      /// Click on whether the mask is allowed to be closed.
+      //maskClosable: true,
+    ),
+  );
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+
+    //introductionExplanation();
+  }
+
+  void introductionExplanation() async {
+    await Future.delayed(Duration(seconds: 1)).whenComplete(() {
+      intro.start(context);
+    });
+  }
 
   void snackBarSetYourTimeValue() {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -42,13 +84,14 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
 
   Widget myTimeValueButton() {
     return Container(
+      key: intro.keys[0],
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: TextButton(
           child: Text(S.of(context).btn_timeValue,
               style: TextStyle(
-                fontSize: 25.0,
+                fontSize: fontSize,
                 color: Colors.white,
               )),
           style: ButtonStyle(
@@ -70,7 +113,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       child: TextButton(
         child: Text(S.of(context).btn_worthToBuy,
             style: TextStyle(
-              fontSize: 25.0,
+              fontSize: fontSize,
               color: Colors.white,
             )),
         style: ButtonStyle(
@@ -100,7 +143,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       child: TextButton(
         child: Text(S.of(context).btn_creditCartImpact,
             style: TextStyle(
-              fontSize: 25.0,
+              fontSize: fontSize,
               color: Colors.white,
             )),
         style: ButtonStyle(
@@ -130,7 +173,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       child: TextButton(
         child: Text(S.of(context).btn_changeSalary,
             style: TextStyle(
-              fontSize: 25.0,
+              fontSize: fontSize,
               color: Colors.white,
             )),
         style: ButtonStyle(

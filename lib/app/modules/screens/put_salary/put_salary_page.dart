@@ -48,7 +48,7 @@ class _PutSalaryPageState
 
   Widget selectSalaryReceiptMethod() {
     return Container(
-      margin: const EdgeInsets.only(top: 15.0, bottom: 10.0),
+      margin: const EdgeInsets.only(top: 15.0, bottom: 25.0),
       child: Text(S.of(context).lbl_selectReceiptMethod,
           style: TextStyle(fontSize: 20.0)),
     );
@@ -56,7 +56,7 @@ class _PutSalaryPageState
 
   Widget toggleSalaryReceiveMethod() {
     return Container(
-      margin: const EdgeInsets.only(top: 15.0, bottom: 15.0),
+      margin: const EdgeInsets.only(bottom: 15.0),
       child: ToggleButtons(
           borderRadius: BorderRadius.circular(5.0),
           color: Colors.black,

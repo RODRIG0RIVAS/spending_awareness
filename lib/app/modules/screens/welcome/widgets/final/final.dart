@@ -1,22 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:spending_awareness/app/modules/share/router_names/my_router_names.dart';
 import 'package:spending_awareness/generated/l10n.dart';
 
-class ProposeWidget extends StatelessWidget {
+class Final extends StatelessWidget {
   Widget titleWidget(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 50.0),
-      child: Text(S.of(context).lbl_welcome_screen_spending_awareness,
+      child: Text(S.of(context).lbl_knowYourMoneyWorth,
           style: TextStyle(fontSize: 20.0)),
     );
   }
 
-  Widget imageWidget(BuildContext context) {
+  Widget okWidget(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.45,
-        child: Image.asset(
-          "images/_propose.png",
-          fit: BoxFit.cover,
+        child: IconButton(
+          icon: Icon(Icons.check_circle_rounded),
+          color: Colors.green,
+          iconSize: MediaQuery.of(context).size.width * 0.5,
+          onPressed: () {
+            Modular.to.pushReplacementNamed(MyRouterNames.splash);
+          },
         ));
   }
 
@@ -28,7 +34,7 @@ class ProposeWidget extends StatelessWidget {
         height: 50.0,
         margin: marginEdgeInsets,
         child: Text(
-          S.of(context).lbl_welcome_screen_propose_explanation,
+          S.of(context).lbl_clickTheButtonAboveToContinue,
           textAlign: TextAlign.justify,
         ));
   }
@@ -39,12 +45,12 @@ class ProposeWidget extends StatelessWidget {
       child: Stack(
         children: [
           Container(
+              alignment: Alignment.centerLeft,
+              child: Icon(Icons.arrow_back_ios, size: 15.0)),
+          Container(
               alignment: Alignment.center,
               child: Text(S.of(context).lbl_swipe,
                   style: TextStyle(fontSize: 15.0))),
-          Container(
-              alignment: Alignment.centerRight,
-              child: Icon(Icons.arrow_forward_ios, size: 15.0))
         ],
       ),
     );
@@ -55,7 +61,7 @@ class ProposeWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         titleWidget(context),
-        imageWidget(context),
+        okWidget(context),
         explanationWidget(context),
         swipeWidget(context),
       ],

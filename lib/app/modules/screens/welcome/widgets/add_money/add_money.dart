@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:spending_awareness/generated/l10n.dart';
 
-class ProposeWidget extends StatelessWidget {
+class AddMoney extends StatelessWidget {
   Widget titleWidget(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 50.0),
-      child: Text(S.of(context).lbl_welcome_screen_spending_awareness,
-          style: TextStyle(fontSize: 20.0)),
+      child:
+          Text(S.of(context).lbl_add_money, style: TextStyle(fontSize: 20.0)),
     );
   }
 
@@ -15,7 +15,7 @@ class ProposeWidget extends StatelessWidget {
         width: MediaQuery.of(context).size.width,
         height: MediaQuery.of(context).size.height * 0.45,
         child: Image.asset(
-          "images/_propose.png",
+          "images/_add_money.png",
           fit: BoxFit.cover,
         ));
   }
@@ -28,7 +28,7 @@ class ProposeWidget extends StatelessWidget {
         height: 50.0,
         margin: marginEdgeInsets,
         child: Text(
-          S.of(context).lbl_welcome_screen_propose_explanation,
+          S.of(context).lbl_add_money_explanation,
           textAlign: TextAlign.justify,
         ));
   }
@@ -38,6 +38,9 @@ class ProposeWidget extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0),
       child: Stack(
         children: [
+          Container(
+              alignment: Alignment.centerLeft,
+              child: Icon(Icons.arrow_back_ios, size: 15.0)),
           Container(
               alignment: Alignment.center,
               child: Text(S.of(context).lbl_swipe,

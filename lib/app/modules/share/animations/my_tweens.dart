@@ -27,4 +27,17 @@ class MyTweens {
       }),
     );
   }
+
+  TweenAnimationBuilder getFontSizeAnimationBuilder(
+      {@required double beginFontSize,
+      @required double endFonzeSize,
+      @required Duration duration,
+      @required Widget toAnimateWidget(context, value, widget)}) {
+    return TweenAnimationBuilder(
+        tween: Tween<double>(begin: beginFontSize, end: endFonzeSize),
+        duration: duration, //650
+        builder: (context, value, widget) {
+          return toAnimateWidget(context, value, widget);
+        });
+  }
 }

@@ -66,11 +66,11 @@ class _WorthToBuyPageState
     return Container(
       margin: const EdgeInsets.only(top: 15.0),
       child:
-          Text(S.of(context).lbl_worthToBuy, style: TextStyle(fontSize: 18.0)),
+          Text(S.of(context).lbl_worthToBuy, style: TextStyle(fontSize: 20.0)),
     );
   }
 
-  Widget hourWorthWidget() {
+  Widget hourWorthWidget(double fontSize) {
     return Container(
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
@@ -82,7 +82,7 @@ class _WorthToBuyPageState
               alignment: Alignment.centerLeft,
               child: Text(
                 "${S.of(context).lbl_yourHourWorth}",
-                style: TextStyle(color: Colors.black, fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: fontSize),
               ),
             ),
           ),
@@ -95,7 +95,7 @@ class _WorthToBuyPageState
                     : controller.hourWorth),
                 style: TextStyle(
                     color: Colors.green,
-                    fontSize: 20.0,
+                    fontSize: fontSize,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -105,7 +105,7 @@ class _WorthToBuyPageState
     );
   }
 
-  Widget dayWorthWidget() {
+  Widget dayWorthWidget(double fontSize) {
     return Container(
       width: MediaQuery.of(context).size.width,
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
@@ -117,7 +117,7 @@ class _WorthToBuyPageState
               alignment: Alignment.centerLeft,
               child: Text(
                 "${S.of(context).lbl_yourDayWorth}",
-                style: TextStyle(color: Colors.black, fontSize: 20.0),
+                style: TextStyle(color: Colors.black, fontSize: fontSize),
               ),
             ),
           ),
@@ -129,7 +129,7 @@ class _WorthToBuyPageState
                     controller.dayWorth.isInfinite ? 0.0 : controller.dayWorth),
                 style: TextStyle(
                     color: Colors.green,
-                    fontSize: 20.0,
+                    fontSize: fontSize,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -191,19 +191,19 @@ class _WorthToBuyPageState
     );
   }
 
-  Widget toBuyItHoursLabel() {
-    TextStyle style = TextStyle(fontSize: 20.0);
+  Widget toBuyItHoursLabel(double fontSize) {
+    TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
         margin: const EdgeInsets.only(top: 30.0),
         child: Text(S.of(context).lbl_toBuyItOnceYouHaveToWork, style: style));
   }
 
-  Widget isCostsXworkHoursOrXdays() {
+  Widget isCostsXworkHoursOrXdays(double fontSize) {
     String hoursOutput = itCostsXworkHours();
     String daysOutput = itCostsXdays();
 
-    TextStyle style = TextStyle(fontSize: 20.0);
+    TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
         margin: const EdgeInsets.only(bottom: 15.0),
@@ -246,16 +246,16 @@ class _WorthToBuyPageState
     return output;
   }
 
-  Widget spendInAweek() {
+  Widget spendInAweek(double fontSize) {
     double costInAweek = controller.getHowDoYouSpendInAweek(
         controller.itemCost, controller.daysInWeek);
 
     String costFormatted = MoneyFormated.getMoneyFormated(costInAweek);
     Color color = costInAweek == 0 ? Colors.green : Colors.red;
 
-    TextStyle styleSpend = TextStyle(fontSize: 20.0);
-    TextStyle styleCost =
-        TextStyle(color: color, fontSize: 20.0, fontWeight: FontWeight.bold);
+    TextStyle styleSpend = TextStyle(fontSize: fontSize);
+    TextStyle styleCost = TextStyle(
+        color: color, fontSize: fontSize, fontWeight: FontWeight.bold);
 
     return Container(
       margin: const EdgeInsets.fromLTRB(15.0, 5.0, 15.0, 30.0),
@@ -276,6 +276,43 @@ class _WorthToBuyPageState
     );
   }
 
+  Widget worthValuesWidgets() {
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: 20.0,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                hourWorthWidget(fontSize),
+                dayWorthWidget(fontSize),
+              ],
+            ),
+          );
+        }));
+  }
+
+  Widget resultWidgets() {
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: 20.0,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                toBuyItHoursLabel(fontSize),
+                isCostsXworkHoursOrXdays(fontSize),
+                spendInAweek(fontSize),
+              ],
+            ),
+          );
+        }));
+  }
+
   Widget getWhiteContainerWidget(EdgeInsets edgeInsets) {
     return SingleChildScrollView(
       child: Container(
@@ -286,13 +323,10 @@ class _WorthToBuyPageState
         child: Column(
           children: [
             worthToBuyLabel(),
-            hourWorthWidget(),
-            dayWorthWidget(),
+            worthValuesWidgets(),
             howMuchTheItemCostsTextFormField(),
             howManyTimesAweekDoYouBuyItTextFormField(),
-            toBuyItHoursLabel(),
-            isCostsXworkHoursOrXdays(),
-            spendInAweek(),
+            resultWidgets(),
           ],
         ),
       ),

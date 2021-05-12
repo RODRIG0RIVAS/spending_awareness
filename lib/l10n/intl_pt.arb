@@ -33,6 +33,13 @@
     "lbl_youSpendInAweek": "Você gasta, por semana",
     "lbl_welcome_screen_propose_explanation": "Esse é o aplicativo para ter alguma noção sobre seus próprios gastos, isto mostrará o quanto de dinheiro você gasta, ou vai gastar, exponencialmente.",
     "lbl_welcome_screen_spending_awareness": "Bem vindo ao conscientizador de gastos",
+    "lbl_choice_your_earn_type": "Escolha o modo de como você recebe o salário",
+    "lbl_get_type": "Você pode escolher semanalmente ou mensalmente.",
+    "lbl_add_money": "Adicione quanto você recebe",
+    "lbl_add_money_explanation": "e clique em ok",
+    "lbl_clickTheButtonAboveToContinue":"Clique no botão acima para continuar",
+    "lbl_getAwarenessAboutSpending": "Saiba o valor do seu dinheiro",
+    
     "lbl_swipe": "Deslize",
 
     "btn_toogle_selectReceiptMethod_week": "Semana",

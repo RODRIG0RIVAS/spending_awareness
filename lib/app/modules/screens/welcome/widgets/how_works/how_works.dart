@@ -5,7 +5,7 @@ class HowWorks extends StatelessWidget {
   Widget titleWidget(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 50.0),
-      child: Text("Choose how you earn your salary",
+      child: Text(S.of(context).lbl_choice_your_earn_type,
           style: TextStyle(fontSize: 20.0)),
     );
   }
@@ -28,9 +28,29 @@ class HowWorks extends StatelessWidget {
         height: 50.0,
         margin: marginEdgeInsets,
         child: Text(
-          "You can choose Weekly or Monthly. This is for the app makes the calc with more precision.",
+          S.of(context).lbl_get_type,
           textAlign: TextAlign.justify,
         ));
+  }
+
+  Widget swipeWidget(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0),
+      child: Stack(
+        children: [
+          Container(
+              alignment: Alignment.centerLeft,
+              child: Icon(Icons.arrow_back_ios, size: 15.0)),
+          Container(
+              alignment: Alignment.center,
+              child: Text(S.of(context).lbl_swipe,
+                  style: TextStyle(fontSize: 15.0))),
+          Container(
+              alignment: Alignment.centerRight,
+              child: Icon(Icons.arrow_forward_ios, size: 15.0))
+        ],
+      ),
+    );
   }
 
   Widget bodyWidget(BuildContext context) {
@@ -40,23 +60,7 @@ class HowWorks extends StatelessWidget {
         titleWidget(context),
         imageWidget(context),
         explanationWidget(context),
-        Container(
-          margin: const EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0),
-          child: Stack(
-            children: [
-              Container(
-                  alignment: Alignment.centerLeft,
-                  child: Icon(Icons.arrow_back_ios, size: 15.0)),
-              Container(
-                  alignment: Alignment.center,
-                  child: Text(S.of(context).lbl_swipe,
-                      style: TextStyle(fontSize: 15.0))),
-              Container(
-                  alignment: Alignment.centerRight,
-                  child: Icon(Icons.arrow_forward_ios, size: 15.0))
-            ],
-          ),
-        )
+        swipeWidget(context),
       ],
     );
   }

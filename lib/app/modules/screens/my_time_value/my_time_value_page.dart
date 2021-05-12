@@ -31,7 +31,7 @@ class _MyTimeValuePageState
     );
   }
 
-  Widget yearWorthWidget() {
+  Widget yearWorthWidget(double fontSize) {
     double yearWorthValue = controller.getYearWorth(widget.mySalary);
 
     String formattedValue = MoneyFormated.getMoneyFormated(yearWorthValue);
@@ -44,7 +44,7 @@ class _MyTimeValuePageState
             child: Container(
               alignment: Alignment.centerLeft,
               child: Text(S.of(context).lbl_yourYearWorth,
-                  style: TextStyle(fontSize: 20.0)),
+                  style: TextStyle(fontSize: fontSize)),
             ),
           ),
           Expanded(
@@ -52,7 +52,7 @@ class _MyTimeValuePageState
               alignment: Alignment.centerRight,
               child: Text("$formattedValue",
                   style: TextStyle(
-                      fontSize: 20.0,
+                      fontSize: fontSize,
                       color: Colors.green,
                       fontWeight: FontWeight.bold)),
             ),
@@ -64,7 +64,7 @@ class _MyTimeValuePageState
     }
   }
 
-  Widget hourWorthWidget() {
+  Widget hourWorthWidget(double fontSize) {
     double hourWorthValue = controller.getHourWorth(
         widget.mySalary, controller.days, controller.hours);
 
@@ -78,7 +78,7 @@ class _MyTimeValuePageState
             alignment: Alignment.centerLeft,
             child: Text(
               S.of(context).lbl_yourHourWorth,
-              style: TextStyle(fontSize: 20.0),
+              style: TextStyle(fontSize: fontSize),
             ),
           ),
         ),
@@ -87,7 +87,7 @@ class _MyTimeValuePageState
             alignment: Alignment.centerRight,
             child: Text("$formattedValue",
                 style: TextStyle(
-                    fontSize: 20.0,
+                    fontSize: fontSize,
                     color: Colors.green,
                     fontWeight: FontWeight.bold)),
           ),
@@ -190,7 +190,7 @@ class _MyTimeValuePageState
     }
   }
 
-  Widget dayWorthWidget() {
+  Widget dayWorthWidget(double fontSize) {
     double dayWorth = controller.getDayWorth(widget.mySalary, controller.days);
     String formattedDayWorth = MoneyFormated.getMoneyFormated(dayWorth);
 
@@ -200,14 +200,14 @@ class _MyTimeValuePageState
             child: Container(
                 alignment: Alignment.centerLeft,
                 child: Text(S.of(context).lbl_yourDayWorth,
-                    style: TextStyle(fontSize: 20.0)))),
+                    style: TextStyle(fontSize: fontSize)))),
         Expanded(
           child: Container(
             alignment: Alignment.centerRight,
             child: Text(
               "$formattedDayWorth",
               style: TextStyle(
-                  fontSize: 20.0,
+                  fontSize: fontSize,
                   color: Colors.green,
                   fontWeight: FontWeight.bold),
             ),
@@ -217,10 +217,10 @@ class _MyTimeValuePageState
     );
   }
 
-  Widget hoursInPeriodWidget() {
+  Widget hoursInPeriodWidget(double fontSize) {
     int period = controller.days * controller.hours;
     String output = S.of(context).lbl_youWorkForXhoursA(period);
-    TextStyle style = TextStyle(fontSize: 20.0);
+    TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
       margin: const EdgeInsets.only(top: 15.0),
@@ -272,19 +272,25 @@ class _MyTimeValuePageState
   }
 
   Widget resultContainer() {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(15, 30, 15, 0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          yearWorthWidget(),
-          hourWorthWidget(),
-          dayWorthWidget(),
-          hoursInPeriodWidget(),
-          saveButton()
-        ],
-      ),
-    );
+    return controller.myTweens.getFontSizeAnimationBuilder(
+        beginFontSize: 0.0,
+        endFonzeSize: 20.0,
+        duration: Duration(milliseconds: 650),
+        toAnimateWidget: ((context, fontSize, widget) {
+          return Container(
+            margin: const EdgeInsets.fromLTRB(15, 30, 15, 0),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                yearWorthWidget(fontSize),
+                hourWorthWidget(fontSize),
+                dayWorthWidget(fontSize),
+                hoursInPeriodWidget(fontSize),
+                saveButton()
+              ],
+            ),
+          );
+        }));
   }
 
   Widget getWhiteContainerWidget(EdgeInsets edgeInsets) {
