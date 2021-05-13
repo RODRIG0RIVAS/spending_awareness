@@ -335,10 +335,20 @@ class S {
     );
   }
 
-  /// `In how many installments?`
+  /// `How much a installment costs?`
+  String get lbl_howMuchOneInstallmentCosts {
+    return Intl.message(
+      'How much a installment costs?',
+      name: 'lbl_howMuchOneInstallmentCosts',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `How many installments?`
   String get lbl_inHowManyInstallments {
     return Intl.message(
-      'In how many installments?',
+      'How many installments?',
       name: 'lbl_inHowManyInstallments',
       desc: '',
       args: [],

@@ -133,8 +133,8 @@ class _CreditCartImpactPageState
         textInputAction: TextInputAction.next,
         controller: controller.howMuchIsTheInstallmentController,
         keyboardType: TextInputType.number,
-        decoration:
-            InputDecoration(labelText: S.of(context).lbl_howMuchTheItemCosts),
+        decoration: InputDecoration(
+            labelText: S.of(context).lbl_howMuchOneInstallmentCosts),
       ),
     );
   }
