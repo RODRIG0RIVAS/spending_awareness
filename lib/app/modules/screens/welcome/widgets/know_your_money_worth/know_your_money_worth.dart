@@ -3,7 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spending_awareness/app/modules/share/router_names/my_router_names.dart';
 import 'package:spending_awareness/generated/l10n.dart';
 
-class Final extends StatelessWidget {
+class KnowYourMoneyWorth extends StatelessWidget {
   Widget titleWidget(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 50.0),
@@ -40,23 +40,6 @@ class Final extends StatelessWidget {
         ));
   }
 
-  Widget swipeWidget(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0),
-      child: Stack(
-        children: [
-          Container(
-              alignment: Alignment.centerLeft,
-              child: Icon(Icons.arrow_back_ios, size: 15.0)),
-          Container(
-              alignment: Alignment.center,
-              child: Text(S.of(context).lbl_swipe,
-                  style: TextStyle(fontSize: 15.0))),
-        ],
-      ),
-    );
-  }
-
   Widget bodyWidget(BuildContext context) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -64,7 +47,6 @@ class Final extends StatelessWidget {
         titleWidget(context),
         okWidget(context),
         explanationWidget(context),
-        swipeWidget(context),
       ],
     );
   }

@@ -24,7 +24,7 @@ class _CreditCartImpactPageState
 
   AppBar getAppBar() {
     return AppBar(
-      title: Text(widget.title),
+      title: Text(S.of(context).lbl_title),
       centerTitle: true,
       backgroundColor: Colors.green,
       elevation: 0.0,
@@ -256,11 +256,13 @@ class _CreditCartImpactPageState
     String hoursOutput = itCostsXworkHours();
     String daysOutput = itCostsXdays();
 
+    String or = S.of(context).lbl_or;
+
     TextStyle style = TextStyle(fontSize: fontSize);
 
     return Container(
         margin: const EdgeInsets.only(bottom: 15.0),
-        child: Text("$hoursOutput or $daysOutput", style: style));
+        child: Text("$hoursOutput $or $daysOutput", style: style));
   }
 
   String itCostsXworkHours() {
@@ -280,7 +282,6 @@ class _CreditCartImpactPageState
     } else {
       hourOrHours = "$hourOrHours\s";
     }
-
     String output =
         "${workHoursCosts["hours"]} $hourOrHours ${S.of(context).lbl_and} ${workHoursCosts["minutes"]} $minuteOrMinutes";
 

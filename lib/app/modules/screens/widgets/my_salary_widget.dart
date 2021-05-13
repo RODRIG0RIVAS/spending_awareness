@@ -17,6 +17,8 @@ class MySalaryWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double fontSize = MediaQuery.of(context).size.width * 0.08;
+
     return Container(
       alignment: Alignment.topCenter,
       padding: const EdgeInsets.only(top: 15.0),
@@ -31,7 +33,7 @@ class MySalaryWidget extends StatelessWidget {
           ),
           Text(
             "${MoneyFormated.getMoneyFormated(mySalaryValue)}",
-            style: TextStyle(fontSize: 50.0, color: Colors.white),
+            style: TextStyle(fontSize: fontSize, color: Colors.white),
           )
         ],
       ),
