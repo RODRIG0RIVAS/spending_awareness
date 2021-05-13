@@ -157,6 +157,7 @@ class _WorthToBuyPageState
         toolbarOptions: ToolbarOptions(
             copy: true, paste: false, cut: true, selectAll: true),
         //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+        textInputAction: TextInputAction.next,
         controller: controller.howMuchTheItemCostsController,
         keyboardType: TextInputType.number,
         decoration:

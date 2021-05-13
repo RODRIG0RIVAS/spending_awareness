@@ -138,9 +138,10 @@ class _PutSalaryPageState
           if (_formKey.currentState.validate()) {
             controller.putSalaryInDatabase(moneyTextController.numberValue);
 
-            isSelected[0]
+            controller.isReceiptMethodByMonth(!isSelected[0]);
+            /*isSelected[0]
                 ? controller.isReceiptMethodByMonth(false)
-                : controller.isReceiptMethodByMonth(true);
+                : controller.isReceiptMethodByMonth(true);*/
 
             controller.goToHome();
           }

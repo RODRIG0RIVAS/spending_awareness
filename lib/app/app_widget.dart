@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:spending_awareness/generated/l10n.dart';
+import 'package:asuka/asuka.dart' as asuka;
 
 class AppWidget extends StatelessWidget {
   @override
@@ -27,6 +28,7 @@ class AppWidget extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.green,
       ),
+      builder: asuka.builder,
       initialRoute: '/',
       onGenerateRoute: Modular.generateRoute,
       debugShowCheckedModeBanner: false,

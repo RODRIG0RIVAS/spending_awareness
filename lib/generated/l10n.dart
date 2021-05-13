@@ -65,6 +65,46 @@ class S {
     );
   }
 
+  /// `Change your time worth`
+  String get lbl_changeTimeWorth {
+    return Intl.message(
+      'Change your time worth',
+      name: 'lbl_changeTimeWorth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have to update how much do your time worth!`
+  String get lbl_changeTimeWorthContent {
+    return Intl.message(
+      'You have to update how much do your time worth!',
+      name: 'lbl_changeTimeWorthContent',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add your time worth`
+  String get lbl_addTimeWorth {
+    return Intl.message(
+      'Add your time worth',
+      name: 'lbl_addTimeWorth',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `You have to add how much do your time worth!`
+  String get lbl_addTimeWorthContent {
+    return Intl.message(
+      'You have to add how much do your time worth!',
+      name: 'lbl_addTimeWorthContent',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `I want to get awareness of:`
   String get lbl_getAwarenessOf {
     return Intl.message(

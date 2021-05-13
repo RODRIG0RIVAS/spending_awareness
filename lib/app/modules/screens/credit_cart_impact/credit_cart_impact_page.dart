@@ -130,6 +130,7 @@ class _CreditCartImpactPageState
         toolbarOptions: ToolbarOptions(
             copy: true, paste: false, cut: true, selectAll: true),
         //inputFormatters: [FilteringTextInputFormatter.digitsOnly],
+        textInputAction: TextInputAction.next,
         controller: controller.howMuchIsTheInstallmentController,
         keyboardType: TextInputType.number,
         decoration:

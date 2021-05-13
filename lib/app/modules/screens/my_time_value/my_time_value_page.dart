@@ -115,19 +115,33 @@ class _MyTimeValuePageState
       margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
       child: TextFormField(
         onChanged: (value) {
-          if (value.isEmpty) {
-            controller.hours = 0;
-            //value = "0";
-          }
           setState(() {
+            if (value.isEmpty) {
+              value = "0";
+              controller.hoursWorkedInAdayController.text = "0";
+            }
+
+            if (value.startsWith("0") && value.length > 1) {
+              controller.hoursWorkedInAdayController.text =
+                  value.replaceFirst("0", "");
+            }
+
             if (int.parse(value) > 24) {
               value = "24";
               controller.hoursWorkedInAdayController.text = "24";
             }
+
+            //put the cursor at the end of the string
+            controller.hoursWorkedInAdayController.selection =
+                TextSelection.fromPosition(TextPosition(
+                    offset:
+                        controller.hoursWorkedInAdayController.text.length));
+
             controller.hours =
                 int.parse(controller.hoursWorkedInAdayController.text);
           });
         },
+        textInputAction: TextInputAction.next,
         controller: controller.hoursWorkedInAdayController,
         keyboardType: TextInputType.number,
         decoration:
@@ -142,15 +156,27 @@ class _MyTimeValuePageState
         margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
         child: TextFormField(
           onChanged: (value) {
-            if (value.isEmpty) {
-              controller.days = 0;
-              //value = "0";
-            }
             setState(() {
+              if (value.isEmpty) {
+                value = "0";
+                controller.daysInPeriodController.text = "0";
+              }
+
+              if (value.startsWith("0") && value.length > 1) {
+                controller.daysInPeriodController.text =
+                    value.replaceFirst("0", "");
+              }
+
               if (int.parse(value) > 31) {
                 value = "31";
                 controller.daysInPeriodController.text = "31";
               }
+
+              //put the cursor at the end of the string
+              controller.daysInPeriodController.selection =
+                  TextSelection.fromPosition(TextPosition(
+                      offset: controller.daysInPeriodController.text.length));
+
               controller.days =
                   int.parse(controller.daysInPeriodController.text);
             });
@@ -167,15 +193,27 @@ class _MyTimeValuePageState
         margin: const EdgeInsets.fromLTRB(15, 15, 15, 0),
         child: TextFormField(
           onChanged: (value) {
-            if (value.isEmpty) {
-              controller.days = 0;
-              //value = "0";
-            }
             setState(() {
+              if (value.isEmpty) {
+                value = "0";
+                controller.daysInPeriodController.text = "0";
+              }
+
+              if (value.startsWith("0") && value.length > 1) {
+                controller.daysInPeriodController.text =
+                    value.replaceFirst("0", "");
+              }
+
               if (int.parse(value) > 7) {
                 value = "7";
                 controller.daysInPeriodController.text = "7";
               }
+
+              //put the cursor at the end of the string
+              controller.daysInPeriodController.selection =
+                  TextSelection.fromPosition(TextPosition(
+                      offset: controller.daysInPeriodController.text.length));
+
               controller.days =
                   int.parse(controller.daysInPeriodController.text);
             });

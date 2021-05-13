@@ -61,6 +61,7 @@ abstract class _MyTimeValueControllerBase with Store {
   start() async {
     await _localDatabase.start().whenComplete(() {
       isReceiptMethodByMonth = _localDatabase.isReceiptMethodByMonth;
+
       days = _localDatabase.daysInPeriod;
       hours = _localDatabase.hoursInDay;
 
