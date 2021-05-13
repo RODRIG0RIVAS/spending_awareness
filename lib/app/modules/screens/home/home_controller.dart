@@ -1,5 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_intro/flutter_intro.dart';
 import 'package:mobx/mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spending_awareness/app/modules/share/animations/my_tweens.dart';

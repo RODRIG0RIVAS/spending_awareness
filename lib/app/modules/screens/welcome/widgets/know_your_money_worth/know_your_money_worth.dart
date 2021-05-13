@@ -53,8 +53,6 @@ class KnowYourMoneyWorth extends StatelessWidget {
 
   Widget mainContainerWidget(BuildContext context) {
     return Container(
-      //TODO: white or green, choose the best option, if white, do not need this
-      //decoration: BoxDecoration(color: Colors.green[300]),
       child: bodyWidget(context),
     );
   }
