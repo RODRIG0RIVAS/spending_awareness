@@ -6,7 +6,7 @@
     "lbl_changeTimeWorth": "Change your time worth",
     "lbl_changeTimeWorthContent": "You have to update how much do your time worth!",
     "lbl_addTimeWorth": "Add your time worth",
-    "lbl_addTimeWorthContent": "You have to add how much do your time worth!",
+    "lbl_addTimeWorthContent": "It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application.",
     "lbl_getAwarenessOf": "I want to get awareness of:",
     "lbl_iReceive": "I receive",
     "lbl_aMonth": "a month",
@@ -45,6 +45,17 @@
     "lbl_knowYourMoneyWorth": "Know your money's worth",
     "lbl_clickTheButtonAboveToContinue":"Click the button above to continue",
     "lbl_swipe": "Swipe",
+
+    "lbl_introductionExplanationTitleAlertDialog": "Explanation",
+    "lbl_eachButtonFunctionality": "Do you want to know the functionality of each button?",
+
+    "lbl_firstButtonExplanation": "As already seen. Here it is calculated how much your time is worth. \n\nJust add how many hours and how many days you work.\n\nThis step is necessary to use all the functions of the app.",
+    "lbl_secondButtonExplanation": "Is it worth it or not to buy it? \nHow long will I have to work to buy this? \nHave the answer in this function.",
+    "lbl_thirdButtonExplanation": "Find out how much an installment weighs on your entire salary, which in fact, with installments is no longer whole.",
+    "lbl_fourthButtonExplanation": "If your salary changes, or is now receiving it in another way that is monthly or weekly, just change it here.",
+
+    "lbl_next": "Next",
+    "lbl_continue": "Continue",
 
     "btn_toogle_selectReceiptMethod_week": "Week",
     "btn_toogle_selectReceiptMethod_month": "Month",

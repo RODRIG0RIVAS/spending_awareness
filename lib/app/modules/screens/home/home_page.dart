@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_intro/flutter_intro.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spending_awareness/app/modules/screens/widgets/my_salary_widget.dart';
@@ -20,7 +21,92 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends ModularState<HomePage, HomeController> {
   //use 'controller' variable to access controller
 
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+
   final double endFontSize = 20.0;
+
+  // ignore: missing_required_param
+  Intro introduction = Intro(stepCount: 4);
+
+  @override
+  void initState() {
+    super.initState();
+    introStart();
+  }
+
+  void introStart() async {
+    await Future.delayed(Duration(milliseconds: 1000)).whenComplete(() {
+      final _next = S.of(context).lbl_next;
+      final _continue = S.of(context).lbl_continue;
+
+      final _title = S.of(context).lbl_introductionExplanationTitleAlertDialog;
+      final _content = S.of(context).lbl_eachButtonFunctionality;
+
+      introduction = updatedIntro(_next, _continue);
+
+      if (!controller.isUserIntroduced && controller.isTimeValueSetted) {
+        return showDialog(
+            context: _scaffoldKey.currentContext,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return introductionProposeAlertDialog(_title, _content, context);
+            });
+      }
+    });
+  }
+
+  List<String> get buttonsExplanations => <String>[
+        S.of(context).lbl_firstButtonExplanation,
+        S.of(context).lbl_secondButtonExplanation,
+        S.of(context).lbl_thirdButtonExplanation,
+        S.of(context).lbl_fourthButtonExplanation
+      ];
+
+  Intro updatedIntro(String _next, String _continue) => Intro(
+        maskColor: Colors.green,
+        noAnimation: false,
+        stepCount: 4,
+        maskClosable: true,
+        padding: EdgeInsets.zero,
+        borderRadius: BorderRadius.circular(25.0),
+        onHighlightWidgetTap: (introStatus) {
+          print(introStatus);
+        },
+        widgetBuilder: StepWidgetBuilder.useDefaultTheme(
+          /// Guide page text
+          texts: buttonsExplanations,
+
+          /// Button text
+          buttonTextBuilder: (curr, total) {
+            return curr < total - 1 ? _next : _continue;
+          },
+        ),
+      );
+
+  AlertDialog introductionProposeAlertDialog(
+          String title, String content, BuildContext context) =>
+      AlertDialog(
+        title: Text(
+          title,
+          textAlign: TextAlign.center,
+        ),
+        content: Text(
+          content,
+          textAlign: TextAlign.justify,
+        ),
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
+        actions: [
+          TextButton(
+            child: Text("Ok"),
+            onPressed: () {
+              Navigator.of(context).pop();
+              controller.setUserIntroduced(true);
+              introduction.start(_scaffoldKey.currentContext);
+            },
+          )
+        ],
+      );
 
   void snackBarSetYourTimeValue() {
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
@@ -48,6 +134,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: TextButton(
+          key: introduction.keys[0],
           child: Text(S.of(context).btn_timeValue,
               style: TextStyle(
                 fontSize: fontSize,
@@ -59,8 +146,9 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
             shape: MaterialStateProperty.all(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(25.0))),
           ),
-          onPressed: () =>
-              controller.openMyTimeValueScreen(controller.mySalary)),
+          onPressed: () {
+            controller.openMyTimeValueScreen(controller.mySalary);
+          }),
     );
   }
 
@@ -70,6 +158,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: TextButton(
+        key: introduction.keys[1],
         child: Text(S.of(context).btn_worthToBuy,
             style: TextStyle(
               fontSize: fontSize,
@@ -100,6 +189,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: TextButton(
+        key: introduction.keys[2],
         child: Text(S.of(context).btn_creditCartImpact,
             style: TextStyle(
               fontSize: fontSize,
@@ -130,6 +220,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
       width: MediaQuery.of(context).size.width,
       height: 50,
       child: TextButton(
+        key: introduction.keys[3],
         child: Text(S.of(context).btn_changeSalary,
             style: TextStyle(
               fontSize: fontSize,
@@ -254,6 +345,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         return;
       },
       child: Scaffold(
+        key: _scaffoldKey,
         backgroundColor: Colors.green,
         appBar: getAppBar(),
         body: getBody(),

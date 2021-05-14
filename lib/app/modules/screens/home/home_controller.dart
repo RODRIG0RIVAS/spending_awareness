@@ -27,6 +27,8 @@ abstract class _HomeControllerBase with Store {
   @observable
   bool isTimeValueSetted;
 
+  bool isUserIntroduced;
+
   _HomeControllerBase(this.myFontsSize, this._localDatabase, this.myTweens) {
     start();
   }
@@ -36,8 +38,11 @@ abstract class _HomeControllerBase with Store {
       mySalary = _localDatabase.salary;
       isReceiptMethodByMonth = _localDatabase.isReceiptMethodByMonth;
       isTimeValueSetted = _localDatabase.isTimeValueSetted;
+      isUserIntroduced = _localDatabase.isUserIntroduced;
 
       isLoading = !isLoading;
+
+      //verifyFirstExecution();
     });
   }
 
@@ -53,5 +58,9 @@ abstract class _HomeControllerBase with Store {
   void openCreditCardImpactScreen() {
     Modular.to
         .pushReplacementNamed(MyRouterNames.creditCardImpact, arguments: false);
+  }
+
+  void setUserIntroduced(bool isUserIntroduced) {
+    _localDatabase.putIsUserIntroduced(isUserIntroduced);
   }
 }

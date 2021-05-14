@@ -95,10 +95,10 @@ class S {
     );
   }
 
-  /// `You have to add how much do your time worth!`
+  /// `It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application.`
   String get lbl_addTimeWorthContent {
     return Intl.message(
-      'You have to add how much do your time worth!',
+      'It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application.',
       name: 'lbl_addTimeWorthContent',
       desc: '',
       args: [],
@@ -480,6 +480,86 @@ class S {
     return Intl.message(
       'Swipe',
       name: 'lbl_swipe',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Explanation`
+  String get lbl_introductionExplanationTitleAlertDialog {
+    return Intl.message(
+      'Explanation',
+      name: 'lbl_introductionExplanationTitleAlertDialog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Do you want to know the functionality of each button?`
+  String get lbl_eachButtonFunctionality {
+    return Intl.message(
+      'Do you want to know the functionality of each button?',
+      name: 'lbl_eachButtonFunctionality',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `As already seen. Here it is calculated how much your time is worth. \n\nJust add how many hours and how many days you work.\n\nThis step is necessary to use all the functions of the app.`
+  String get lbl_firstButtonExplanation {
+    return Intl.message(
+      'As already seen. Here it is calculated how much your time is worth. \n\nJust add how many hours and how many days you work.\n\nThis step is necessary to use all the functions of the app.',
+      name: 'lbl_firstButtonExplanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Is it worth it or not to buy it? \nHow long will I have to work to buy this? \nHave the answer in this function.`
+  String get lbl_secondButtonExplanation {
+    return Intl.message(
+      'Is it worth it or not to buy it? \nHow long will I have to work to buy this? \nHave the answer in this function.',
+      name: 'lbl_secondButtonExplanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Find out how much an installment weighs on your entire salary, which in fact, with installments is no longer whole.`
+  String get lbl_thirdButtonExplanation {
+    return Intl.message(
+      'Find out how much an installment weighs on your entire salary, which in fact, with installments is no longer whole.',
+      name: 'lbl_thirdButtonExplanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `If your salary changes, or is now receiving it in another way that is monthly or weekly, just change it here.`
+  String get lbl_fourthButtonExplanation {
+    return Intl.message(
+      'If your salary changes, or is now receiving it in another way that is monthly or weekly, just change it here.',
+      name: 'lbl_fourthButtonExplanation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Next`
+  String get lbl_next {
+    return Intl.message(
+      'Next',
+      name: 'lbl_next',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Continue`
+  String get lbl_continue {
+    return Intl.message(
+      'Continue',
+      name: 'lbl_continue',
       desc: '',
       args: [],
     );

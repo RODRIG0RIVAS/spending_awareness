@@ -14,6 +14,13 @@ class RLocalDatabase {
     });
   }
 
+  void putIsUserIntroduced(bool value) {
+    _controlBox.put('is_user_introduced', value);
+  }
+
+  bool get isUserIntroduced =>
+      _controlBox.get('is_user_introduced', defaultValue: false);
+
   void putSalary(double value) {
     _moneyBox.put('salary', value);
   }

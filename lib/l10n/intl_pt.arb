@@ -6,7 +6,7 @@
     "lbl_changeTimeWorth": "Mude o valor do tempo",
     "lbl_changeTimeWorthContent": "É necessário atualizar o quanto seu tempo vale!",
     "lbl_addTimeWorth": "Adicione o valor do tempo",
-    "lbl_addTimeWorthContent": "É necessário adicionar o quanto seu tempo vale!",
+    "lbl_addTimeWorthContent": "É necessário calcular quanto seu tempo vale. Na próxima tela, você adicionada quantas horas e por quantos dias você trabalha. Este processo é necessário para usar todas as funções do aplicativo.",
     "lbl_getAwarenessOf": "Eu quero me conscientizar de:",
     "lbl_iReceive": "Eu recebo",
     "lbl_aMonth": "por mês",
@@ -45,8 +45,18 @@
     "lbl_knowYourMoneyWorth": "Saiba o valor do seu dinheiro",
     "lbl_clickTheButtonAboveToContinue":"Clique no botão acima para continuar",
     "lbl_getAwarenessAboutSpending": "Saiba o valor do seu dinheiro",
-    
     "lbl_swipe": "Deslize",
+
+    "lbl_introductionExplanationTitleAlertDialog": "Explicação",
+    "lbl_eachButtonFunctionality": "Deseja saber qual a funcionalidade de cada botão?",
+    
+    "lbl_firstButtonExplanation": "Como já foi visto. Aqui é calculado quanto o seu tempo vale. \n\nApenas adicione quantas horas e por quantos dias você trabalha.\n\nEste passo é necessário pra usar todas as funções do app.",
+    "lbl_secondButtonExplanation": "Vale a pena ou não comprar isso? \nQuanto tempo eu vou ter de trabalhar pra comprar isso? \nTenha a resposta nesta função.",
+    "lbl_thirdButtonExplanation": "Tenha noção do quanto um parcelamento pesa no seu salário inteiro, que na verdade, com parcelamento não é mais inteiro.",
+    "lbl_fourthButtonExplanation": "Caso seu salário mude, ou agora esteja recebendo de uma outra forma que seja mensal ou semanal, apenas mude aqui.",
+
+    "lbl_next": "Próximo",
+    "lbl_continue": "Continuar",
 
     "btn_toogle_selectReceiptMethod_week": "Semana",
     "btn_toogle_selectReceiptMethod_month": "Mês",

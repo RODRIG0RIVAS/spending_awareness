@@ -25,12 +25,12 @@ class HowWorks extends StatelessWidget {
         EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0);
 
     return Container(
-        height: 50.0,
+        height: 100.0,
         margin: marginEdgeInsets,
-        child: Text(
-          S.of(context).lbl_get_type,
-          textAlign: TextAlign.justify,
-        ));
+        child: Text(S.of(context).lbl_get_type,
+            textAlign: TextAlign.justify,
+            style: TextStyle(
+                fontSize: MediaQuery.of(context).size.width * 0.048)));
   }
 
   Widget bodyWidget(BuildContext context) {

@@ -16,12 +16,16 @@ abstract class _PutSalaryControllerBase with Store {
   final RLocalDatabase _localDatabase;
   final MyTweens myTweens;
 
+  bool isFirstExecution;
+
   _PutSalaryControllerBase(this._localDatabase, this.myTweens) {
     start();
   }
 
   start() async {
-    await _localDatabase.start();
+    await _localDatabase.start().whenComplete(() {
+      isFirstExecution = _localDatabase.firstExecution;
+    });
   }
 
   void putSalaryInDatabase(double value) {
@@ -44,6 +48,7 @@ abstract class _PutSalaryControllerBase with Store {
 
   void isReceiptMethodByMonth(bool value) {
     if (_localDatabase.firstExecution) {
+      //TODO: first execution set do false here
       _localDatabase.putFirstExecution(false);
 
       _localDatabase.putIsReceiptMethodByMonth(value);
@@ -62,8 +67,8 @@ abstract class _PutSalaryControllerBase with Store {
           shape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),
           actions: [
-            IconButton(
-              icon: Icon(Icons.done_outlined),
+            TextButton(
+              child: Text("Ok"),
               onPressed: () {
                 Navigator.pop(context);
                 Modular.to.pushReplacementNamed(MyRouterNames.myTimeValue,
@@ -98,8 +103,8 @@ abstract class _PutSalaryControllerBase with Store {
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15.0)),
             actions: [
-              IconButton(
-                icon: Icon(Icons.done_outlined),
+              TextButton(
+                child: Text("Ok"),
                 onPressed: () {
                   Navigator.pop(context);
                   Modular.to.pushReplacementNamed(MyRouterNames.myTimeValue,
