@@ -47,7 +47,7 @@
     "lbl_swipe": "Swipe",
 
     "lbl_introductionExplanationTitleAlertDialog": "Explanation",
-    "lbl_eachButtonFunctionality": "Do you want to know the functionality of each button?",
+    "lbl_eachButtonFunctionality": "Buttons tutorial",
 
     "lbl_firstButtonExplanation": "As already seen. Here it is calculated how much your time is worth. \n\nJust add how many hours and how many days you work.\n\nThis step is necessary to use all the functions of the app.",
     "lbl_secondButtonExplanation": "Is it worth it or not to buy it? \nHow long will I have to work to buy this? \nHave the answer in this function.",

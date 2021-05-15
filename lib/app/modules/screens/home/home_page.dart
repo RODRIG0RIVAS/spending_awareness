@@ -92,7 +92,7 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
         ),
         content: Text(
           content,
-          textAlign: TextAlign.justify,
+          textAlign: TextAlign.center,
         ),
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(15.0)),

@@ -495,10 +495,10 @@ class S {
     );
   }
 
-  /// `Do you want to know the functionality of each button?`
+  /// `Buttons tutorial`
   String get lbl_eachButtonFunctionality {
     return Intl.message(
-      'Do you want to know the functionality of each button?',
+      'Buttons tutorial',
       name: 'lbl_eachButtonFunctionality',
       desc: '',
       args: [],

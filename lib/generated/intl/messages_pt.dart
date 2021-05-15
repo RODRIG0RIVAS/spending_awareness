@@ -48,7 +48,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lbl_clickTheButtonAboveToContinue" : MessageLookupByLibrary.simpleMessage("Clique no botão acima para continuar"),
     "lbl_continue" : MessageLookupByLibrary.simpleMessage("Continuar"),
     "lbl_day" : MessageLookupByLibrary.simpleMessage("dia"),
-    "lbl_eachButtonFunctionality" : MessageLookupByLibrary.simpleMessage("Deseja saber qual a funcionalidade de cada botão?"),
+    "lbl_eachButtonFunctionality" : MessageLookupByLibrary.simpleMessage("Tutorial dos botões"),
     "lbl_firstButtonExplanation" : MessageLookupByLibrary.simpleMessage("Como já foi visto. Aqui é calculado quanto o seu tempo vale. \n\nApenas adicione quantas horas e por quantos dias você trabalha.\n\nEste passo é necessário pra usar todas as funções do app."),
     "lbl_forHowManyDaysInAweek" : MessageLookupByLibrary.simpleMessage("Por quantos dias na semana?"),
     "lbl_forHowManydaysInAmonth" : MessageLookupByLibrary.simpleMessage("Por quantos dias no mês?"),
