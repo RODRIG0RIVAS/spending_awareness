@@ -3,17 +3,6 @@
 part of 'credit_cart_impact_controller.dart';
 
 // **************************************************************************
-// InjectionGenerator
-// **************************************************************************
-
-final $CreditCartImpactController = BindInject(
-  (i) => CreditCartImpactController(
-      i<MyFontsSize>(), i<RLocalDatabase>(), i<MyTweens>()),
-  singleton: true,
-  lazy: true,
-);
-
-// **************************************************************************
 // StoreGenerator
 // **************************************************************************
 

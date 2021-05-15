@@ -3,17 +3,6 @@
 part of 'my_time_value_controller.dart';
 
 // **************************************************************************
-// InjectionGenerator
-// **************************************************************************
-
-final $MyTimeValueController = BindInject(
-  (i) => MyTimeValueController(
-      i<MyFontsSize>(), i<RLocalDatabase>(), i<MyTweens>()),
-  singleton: true,
-  lazy: true,
-);
-
-// **************************************************************************
 // StoreGenerator
 // **************************************************************************
 

@@ -10,7 +10,8 @@ import 'credit_cart_impact_page.dart';
 class CreditCartImpactModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        $CreditCartImpactController,
+        Bind((i) => CreditCartImpactController(
+            i.get<MyFontsSize>(), i.get<RLocalDatabase>(), i.get<MyTweens>())),
         Bind((i) => MyFontsSize()),
         Bind((i) => MyTweens()),
         Bind((i) => RLocalDatabase())

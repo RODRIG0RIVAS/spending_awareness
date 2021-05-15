@@ -15,7 +15,7 @@ import 'modules/screens/welcome/welcome_module.dart';
 
 class AppModule extends MainModule {
   @override
-  List<Bind> get binds => [$AppController];
+  List<Bind> get binds => [Bind((i) => AppController())];
 
   @override
   List<ModularRouter> get routers => [

@@ -9,7 +9,8 @@ import 'put_salary_page.dart';
 class PutSalaryModule extends ChildModule {
   @override
   List<Bind> get binds => [
-        $PutSalaryController,
+        Bind((i) =>
+            PutSalaryController(i.get<RLocalDatabase>(), i.get<MyTweens>())),
         Bind((i) => RLocalDatabase()),
         Bind((i) => MyTweens()),
       ];

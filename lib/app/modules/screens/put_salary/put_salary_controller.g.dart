@@ -3,16 +3,6 @@
 part of 'put_salary_controller.dart';
 
 // **************************************************************************
-// InjectionGenerator
-// **************************************************************************
-
-final $PutSalaryController = BindInject(
-  (i) => PutSalaryController(i<RLocalDatabase>(), i<MyTweens>()),
-  singleton: true,
-  lazy: true,
-);
-
-// **************************************************************************
 // StoreGenerator
 // **************************************************************************
 

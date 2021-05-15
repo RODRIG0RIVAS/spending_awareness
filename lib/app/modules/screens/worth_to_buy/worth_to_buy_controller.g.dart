@@ -3,16 +3,6 @@
 part of 'worth_to_buy_controller.dart';
 
 // **************************************************************************
-// InjectionGenerator
-// **************************************************************************
-
-final $WorthToBuyController = BindInject(
-  (i) => WorthToBuyController(i<RLocalDatabase>(), i<MyTweens>()),
-  singleton: true,
-  lazy: true,
-);
-
-// **************************************************************************
 // StoreGenerator
 // **************************************************************************
 
