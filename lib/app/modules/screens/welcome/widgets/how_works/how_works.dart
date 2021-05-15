@@ -24,6 +24,18 @@ class HowWorks extends StatelessWidget {
     }
   }
 
+  //another gamb
+  double getWidthToTenInchesTabletText(context) {
+    double heightMediaQuery = MediaQuery.of(context).size.height;
+    double widthMediaQuery = MediaQuery.of(context).size.width;
+
+    if ((heightMediaQuery == 1232.0) && widthMediaQuery == 800.0) {
+      return MediaQuery.of(context).size.width * 0.040;
+    } else {
+      return MediaQuery.of(context).size.width * 0.048;
+    }
+  }
+
   Widget imageWidget(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
@@ -43,8 +55,8 @@ class HowWorks extends StatelessWidget {
         margin: marginEdgeInsets,
         child: Text(S.of(context).lbl_get_type,
             textAlign: TextAlign.justify,
-            style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * 0.048)));
+            style:
+                TextStyle(fontSize: getWidthToTenInchesTabletText(context))));
   }
 
   Widget bodyWidget(BuildContext context) {

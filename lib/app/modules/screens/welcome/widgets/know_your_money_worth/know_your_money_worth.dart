@@ -12,15 +12,29 @@ class KnowYourMoneyWorth extends StatelessWidget {
     );
   }
 
-  //gamb
+  //gamb, do not touch
   double getHeight(context) {
     double heightMediaQuery = MediaQuery.of(context).size.height;
     double widthMediaQuery = MediaQuery.of(context).size.width;
 
-    if ((heightMediaQuery.round() != 913) && (widthMediaQuery.round() != 601)) {
-      return MediaQuery.of(context).size.height * 0.45;
-    } else {
+    if ((heightMediaQuery.round() == 913) && (widthMediaQuery.round() == 601)) {
       return MediaQuery.of(context).size.height * 0.50;
+    } else if ((heightMediaQuery == 1232.0) && widthMediaQuery == 800.0) {
+      return MediaQuery.of(context).size.height * 0.50;
+    } else {
+      return MediaQuery.of(context).size.height * 0.45;
+    }
+  }
+
+  //another gamb
+  double getWidthToTenInchesTabletText(context) {
+    double heightMediaQuery = MediaQuery.of(context).size.height;
+    double widthMediaQuery = MediaQuery.of(context).size.width;
+
+    if ((heightMediaQuery == 1232.0) && widthMediaQuery == 800.0) {
+      return MediaQuery.of(context).size.width * 0.040;
+    } else {
+      return MediaQuery.of(context).size.width * 0.048;
     }
   }
 
@@ -48,8 +62,8 @@ class KnowYourMoneyWorth extends StatelessWidget {
         margin: marginEdgeInsets,
         child: Text(S.of(context).lbl_clickTheButtonAboveToContinue,
             textAlign: TextAlign.justify,
-            style: TextStyle(
-                fontSize: MediaQuery.of(context).size.width * 0.048)));
+            style:
+                TextStyle(fontSize: getWidthToTenInchesTabletText(context))));
   }
 
   Widget bodyWidget(BuildContext context) {
