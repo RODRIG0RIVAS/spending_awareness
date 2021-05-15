@@ -10,10 +10,24 @@ class HowWorks extends StatelessWidget {
     );
   }
 
+  double getHeight(context) {
+    double heightMediaQuery = MediaQuery.of(context).size.height;
+    double widthMediaQuery = MediaQuery.of(context).size.width;
+
+    if ((heightMediaQuery.round() == 913) && (widthMediaQuery.round() == 601)) {
+      return MediaQuery.of(context).size.height * 0.50;
+    } else if ((heightMediaQuery == 1232.0) && widthMediaQuery == 800.0) {
+      print("fon");
+      return MediaQuery.of(context).size.height * 0.50;
+    } else {
+      return MediaQuery.of(context).size.height * 0.45;
+    }
+  }
+
   Widget imageWidget(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.45,
+        height: getHeight(context),
         child: Image.asset(
           "images/_choice_earn_salary_type.png",
           fit: BoxFit.cover,
@@ -25,7 +39,7 @@ class HowWorks extends StatelessWidget {
         EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0);
 
     return Container(
-        height: 100.0,
+        height: 150.0,
         margin: marginEdgeInsets,
         child: Text(S.of(context).lbl_get_type,
             textAlign: TextAlign.justify,

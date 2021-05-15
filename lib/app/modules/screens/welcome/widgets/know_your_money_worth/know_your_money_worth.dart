@@ -12,10 +12,22 @@ class KnowYourMoneyWorth extends StatelessWidget {
     );
   }
 
+  //gamb
+  double getHeight(context) {
+    double heightMediaQuery = MediaQuery.of(context).size.height;
+    double widthMediaQuery = MediaQuery.of(context).size.width;
+
+    if ((heightMediaQuery.round() != 913) && (widthMediaQuery.round() != 601)) {
+      return MediaQuery.of(context).size.height * 0.45;
+    } else {
+      return MediaQuery.of(context).size.height * 0.50;
+    }
+  }
+
   Widget okWidget(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.45,
+        height: getHeight(context),
         child: IconButton(
           icon: Icon(Icons.check_circle_rounded),
           color: Colors.green,
@@ -32,7 +44,7 @@ class KnowYourMoneyWorth extends StatelessWidget {
         EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0);
 
     return Container(
-        height: 100.0,
+        height: 150.0,
         margin: marginEdgeInsets,
         child: Text(S.of(context).lbl_clickTheButtonAboveToContinue,
             textAlign: TextAlign.justify,

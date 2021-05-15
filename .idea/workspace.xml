@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfb26251-3544-4b5b-a753-0508d0965a86" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/android/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/android/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/add_money/add_money.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/add_money/add_money.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/how_works/how_works.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/how_works/how_works.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/know_your_money_worth/know_your_money_worth.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/know_your_money_worth/know_your_money_worth.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/propose/propose.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/app/modules/screens/welcome/widgets/propose/propose.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

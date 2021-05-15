@@ -10,10 +10,21 @@ class AddMoney extends StatelessWidget {
     );
   }
 
+  double getHeight(context) {
+    double heightMediaQuery = MediaQuery.of(context).size.height;
+    double widthMediaQuery = MediaQuery.of(context).size.width;
+
+    if ((heightMediaQuery.round() != 913) && (widthMediaQuery.round() != 601)) {
+      return MediaQuery.of(context).size.height * 0.45;
+    } else {
+      return MediaQuery.of(context).size.height * 0.50;
+    }
+  }
+
   Widget imageWidget(BuildContext context) {
     return Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.height * 0.45,
+        height: getHeight(context),
         child: Image.asset(
           "images/_add_money.png",
           fit: BoxFit.cover,
@@ -25,7 +36,7 @@ class AddMoney extends StatelessWidget {
         EdgeInsets.fromLTRB(30.0, 50.0, 30.0, 0.0);
 
     return Container(
-        height: 100.0,
+        height: 150.0,
         margin: marginEdgeInsets,
         child: Text(S.of(context).lbl_add_money_explanation,
             textAlign: TextAlign.justify,
