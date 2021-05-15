@@ -48,7 +48,6 @@ abstract class _PutSalaryControllerBase with Store {
 
   void isReceiptMethodByMonth(bool value) {
     if (_localDatabase.firstExecution) {
-      //TODO: first execution set do false here
       _localDatabase.putFirstExecution(false);
 
       _localDatabase.putIsReceiptMethodByMonth(value);
