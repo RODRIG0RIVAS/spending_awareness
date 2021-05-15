@@ -1,4 +1,4 @@
-package com.example.spending_awareness
+package com.rodrigorivas.spending_awareness
 
 import io.flutter.embedding.android.FlutterActivity
 
