@@ -95,10 +95,10 @@ class S {
     );
   }
 
-  /// `It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application.`
+  /// `It is necessary to calculate how much your time is worth. On the next screen, you will set how many hours and how many days you work. This process is necessary to use all the functions of the application.`
   String get lbl_addTimeWorthContent {
     return Intl.message(
-      'It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application.',
+      'It is necessary to calculate how much your time is worth. On the next screen, you will set how many hours and how many days you work. This process is necessary to use all the functions of the application.',
       name: 'lbl_addTimeWorthContent',
       desc: '',
       args: [],

@@ -38,7 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lbl_aMonth" : MessageLookupByLibrary.simpleMessage("por mês"),
     "lbl_aWeek" : MessageLookupByLibrary.simpleMessage("por semana"),
     "lbl_addTimeWorth" : MessageLookupByLibrary.simpleMessage("Adicione o valor do tempo"),
-    "lbl_addTimeWorthContent" : MessageLookupByLibrary.simpleMessage("É necessário calcular quanto seu tempo vale. Na próxima tela, você adicionada quantas horas e por quantos dias você trabalha. Este processo é necessário para usar todas as funções do aplicativo."),
+    "lbl_addTimeWorthContent" : MessageLookupByLibrary.simpleMessage("É necessário calcular quanto seu tempo vale. Na próxima tela, você adicionará quantas horas e por quantos dias você trabalha. Este processo é necessário para usar todas as funções do aplicativo."),
     "lbl_add_money" : MessageLookupByLibrary.simpleMessage("Adicione quanto você recebe"),
     "lbl_add_money_explanation" : MessageLookupByLibrary.simpleMessage("e clique em ok"),
     "lbl_and" : MessageLookupByLibrary.simpleMessage("e"),

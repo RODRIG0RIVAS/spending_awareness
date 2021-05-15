@@ -38,7 +38,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "lbl_aMonth" : MessageLookupByLibrary.simpleMessage("a month"),
     "lbl_aWeek" : MessageLookupByLibrary.simpleMessage("a week"),
     "lbl_addTimeWorth" : MessageLookupByLibrary.simpleMessage("Add your time worth"),
-    "lbl_addTimeWorthContent" : MessageLookupByLibrary.simpleMessage("It is necessary to calculate how much your time is worth. On the next screen, you added how many hours and how many days you work. This process is necessary to use all the functions of the application."),
+    "lbl_addTimeWorthContent" : MessageLookupByLibrary.simpleMessage("It is necessary to calculate how much your time is worth. On the next screen, you will set how many hours and how many days you work. This process is necessary to use all the functions of the application."),
     "lbl_add_money" : MessageLookupByLibrary.simpleMessage("Add how much you get"),
     "lbl_add_money_explanation" : MessageLookupByLibrary.simpleMessage("and click ok"),
     "lbl_and" : MessageLookupByLibrary.simpleMessage("and"),
