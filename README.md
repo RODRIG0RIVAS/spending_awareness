@@ -1,4 +1,4 @@
-<p><img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></p>
+<img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" align="center"/>
 
 <h1 align="center">Spending Awareness</h1>
 <p align="center">A Flutter app to make better awareness of how you spend your money</p>
