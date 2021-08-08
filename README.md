@@ -10,8 +10,8 @@
     <img src="https://img.shields.io/badge/progress-complete-green"/>
 </div>
 
-<hr/>
     <p align="center">
+        <a href="#app_in_google_play">App in Google Play</a>
         <a href="#objective">Objective</a> | 
         <a href="#technology">Technology</a> | 
         <a href="#packages">Packages</a> | 
@@ -19,10 +19,22 @@
         <a href="#author">Author</a>
    </p>
 
+   <hr/>
+
+   <p id="#app_in_google_play">
+       <h2>App in Google Play</h2>
+       <p>You can download it 
+            <a href="https://play.google.com/store/apps/details?id=com.rodrigorivas.spending_awareness">
+            here
+            </a>
+        </p>
+   </p>
+
+
    <p id="#objective">
         <h2>Objective</h2>
-        <p>Learn how to upload an app to Google Play, and start improving my knowledge of Flutter animations</p>
-   </p>
+        <p>Learn how to upload an app to Google Play, start improving my knowledge of Flutter animations, and initiate in internationalization.</p>
+    </p>
 
    <p id="#technology">
         <h2>Technology</h2>
