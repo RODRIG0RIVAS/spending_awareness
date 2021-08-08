@@ -1,10 +1,15 @@
-<div align="center"><img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/></div>
+<div align="center">
+    <img src="android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"/>
+</div>
 
 
 <h1 align="center">Spending Awareness</h1>
 <p align="center">A Flutter app to make better awareness of how you spend your money</p>
 
-<img src="https://img.shields.io/badge/progress-complete-green"/>
+<div align="center">
+    <img src="https://img.shields.io/badge/progress-complete-green"/>
+</div>
+
 <hr/>
 <p align="center">
     <a href="#objetivo">Objetivo</a> • 
