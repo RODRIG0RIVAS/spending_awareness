@@ -38,7 +38,7 @@
 
 <p id="#technology">
     <h2>Technology</h2>
-    <p>Flutter at 1.25.0-8-3.pre - channel beta with Dart 2.12.0</p>
+    <p><a href="https://flutter.dev/">Flutter</a> at 1.25.0-8-3.pre - channel beta with Dart 2.12.0</p>
 </p>
 
 <p id="#packages">
