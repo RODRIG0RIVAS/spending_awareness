@@ -32,14 +32,14 @@
    <p>
         <div id="#packages">
             <h2>Packages</h2>
-            <a href="https://pub.dev/packages/flutter_modular">flutter_modular</a>
-            <a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a>
-            <a href="https://pub.dev/packages/mobx">mobx</a>
-            <a href="https://pub.dev/packages/flutter_intro">flutter_intro</a>
-            <a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a>
-            <a href="https://pub.dev/packages/path_provider">path_provider</a>
-            <a href="https://pub.dev/packages/hive">hive</a>
-            <a href="https://pub.dev/packages/asuka">asuka</a>
+            <a href="https://pub.dev/packages/flutter_modular">flutter_modular</a><br/>
+            <a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a><br/>
+            <a href="https://pub.dev/packages/mobx">mobx</a><br/>
+            <a href="https://pub.dev/packages/flutter_intro">flutter_intro</a><br/>
+            <a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a><br/>
+            <a href="https://pub.dev/packages/path_provider">path_provider</a><br/>
+            <a href="https://pub.dev/packages/hive">hive</a><br/>
+            <a href="https://pub.dev/packages/asuka">asuka</a><br/>
         </div>
     </p>
 
