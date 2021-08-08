@@ -29,9 +29,18 @@
         <p>Flutter at 1.25.0-8-3.pre - channel beta with Dart 2.12.0</p>
    </p>
 
-    <p id="#packages">
-        <h2>Packages</h2>
-
+   <p>
+        <div id="#packages">
+            <h2>Packages</h2>
+            <a href="https://pub.dev/packages/flutter_modular">flutter_modular</a>
+            <a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a>
+            <a href="https://pub.dev/packages/mobx">mobx</a>
+            <a href="https://pub.dev/packages/flutter_intro">flutter_intro</a>
+            <a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a>
+            <a href="https://pub.dev/packages/path_provider">path_provider</a>
+            <a href="https://pub.dev/packages/hive">hive</a>
+            <a href="https://pub.dev/packages/asuka">asuka</a>
+        </div>
     </p>
 
 Running at Flutter 1.25.0-8-3.pre - channel beta
