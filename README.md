@@ -10,14 +10,16 @@
     <img src="https://img.shields.io/badge/progress-complete-green"/>
 </div>
 
-    <p align="center">
-        <a href="#app_in_google_play">App in Google Play</a> |
-        <a href="#objective">Objective</a> | 
-        <a href="#technology">Technology</a> | 
-        <a href="#packages">Packages</a> | 
-        <a href="#license">License</a> | 
-        <a href="#author">Author</a>
-    </p>
+    <p>
+        <p align="center">
+            <a href="#app_in_google_play">App in Google Play</a> |
+            <a href="#objective">Objective</a> | 
+            <a href="#technology">Technology</a> | 
+            <a href="#packages">Packages</a> | 
+            <a href="#license">License</a> | 
+            <a href="#author">Author</a>
+        </p>
+    </p>    
 
    <hr/>
 
