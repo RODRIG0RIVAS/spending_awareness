@@ -19,17 +19,17 @@
     <a href="#author">Author</a>
    </p>
 
-   <div id="#objective">
+   <p id="#objective">
         <h2>Objective</h2>
         <p>Learn how to upload an app to Google Play, and start improving my knowledge of Flutter animations</p>
-   </div>
+   </p>
 
-   <div id="#technology">
+   <p id="#technology">
         <h2>Technology</h2>
         <p>Flutter at 1.25.0-8-3.pre - channel beta with Dart 2.12.0</p>
-    </div>
+   </p>
 
-    <div id="#packages">
+    <p id="#packages">
         <h2>Packages</h2>
         <a href="https://pub.dev/packages/flutter_modular">flutter_modular</a>
         <a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a>
@@ -39,7 +39,7 @@
         <a href="https://pub.dev/packages/path_provider">path_provider</a>
         <a href="https://pub.dev/packages/hive">hive</a>
         <a href="https://pub.dev/packages/asuka">asuka</a>
-    </div>
+    </p>
 
 Running at Flutter 1.25.0-8-3.pre - channel beta
 Dart 2.12.0 (build 2.12.0-0-133.7.beta)
