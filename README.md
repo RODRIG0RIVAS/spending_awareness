@@ -31,14 +31,7 @@
 
     <p id="#packages">
         <h2>Packages</h2>
-        <p><a href="https://pub.dev/packages/flutter_modular">flutter_modular</a></p>
-        <p><a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a></p>
-        <p><a href="https://pub.dev/packages/mobx">mobx</a></p>
-        <p><a href="https://pub.dev/packages/flutter_intro">flutter_intro</a></p>
-        <p><a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a></p>
-        <p><a href="https://pub.dev/packages/path_provider">path_provider</a></p>
-        <p><a href="https://pub.dev/packages/hive">hive</a></p>
-        <p><a href="https://pub.dev/packages/asuka">asuka</a></p>
+
     </p>
 
 Running at Flutter 1.25.0-8-3.pre - channel beta
