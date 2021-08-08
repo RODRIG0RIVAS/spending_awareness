@@ -12,10 +12,10 @@
 
 <hr/>
 <p align="center">
-    <a href="#objetivo">Objetivo</a> • 
-    <a href="#tecnologias">Tecnologias</a> • 
-    <a href="#packages">Packages</a> •
-    <a href="#licenc-a">Licença</a> • 
+    <a href="#objetivo">Objetivo</a> | 
+    <a href="#tecnologias">Tecnologias</a> | 
+    <a href="#packages">Packages</a> | 
+    <a href="#licenc-a">Licença</a> | 
     <a href="#autor">Autor</a>
    </p>
 
