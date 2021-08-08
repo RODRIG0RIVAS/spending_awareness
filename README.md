@@ -17,7 +17,7 @@
         <a href="#packages">Packages</a> | 
         <a href="#license">License</a> | 
         <a href="#author">Author</a>
-   </p>
+    </p>
 
    <hr/>
 
