@@ -12,12 +12,17 @@
 
 <hr/>
 <p align="center">
-    <a href="#objetivo">Objetivo</a> | 
-    <a href="#tecnologias">Tecnologias</a> | 
+    <a href="#objective">Objective</a> | 
+    <a href="#technologies">Technologies</a> | 
     <a href="#packages">Packages</a> | 
-    <a href="#licenc-a">Licença</a> | 
-    <a href="#autor">Autor</a>
+    <a href="#license">License</a> | 
+    <a href="#author">Author</a>
    </p>
+
+   <div id="#objective">
+        <h3>Objective</h3>
+        <p>Learn how to upload an app to Google Play, and start improving my knowledge of Flutter animations</p>
+   </div>
 
 Running at Flutter 1.25.0-8-3.pre - channel beta
 Dart 2.12.0 (build 2.12.0-0-133.7.beta)
