@@ -24,7 +24,7 @@ class _CreditCartImpactPageState
 
   AppBar getAppBar() {
     return AppBar(
-      title: Text(S.of(context).lbl_title),
+      title: Text("S.of(context).lbl_title"),
       centerTitle: true,
       backgroundColor: Colors.green,
       elevation: 0.0,

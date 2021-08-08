@@ -5,7 +5,7 @@ class HowWorks extends StatelessWidget {
   Widget titleWidget(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 50.0),
-      child: Text(S.of(context).lbl_choice_your_earn_type,
+      child: Text("S.of(context).lbl_choice_your_earn_type",
           style: TextStyle(fontSize: 20.0)),
     );
   }
@@ -53,7 +53,7 @@ class HowWorks extends StatelessWidget {
     return Container(
         height: 150.0,
         margin: marginEdgeInsets,
-        child: Text(S.of(context).lbl_get_type,
+        child: Text("S.of(context).lbl_get_type",
             textAlign: TextAlign.justify,
             style:
                 TextStyle(fontSize: getWidthToTenInchesTabletText(context))));
