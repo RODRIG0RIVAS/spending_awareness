@@ -11,12 +11,12 @@
 </div>
 
 <hr/>
-<p align="center">
-    <a href="#objective">Objective</a> | 
-    <a href="#technology">Technology</a> | 
-    <a href="#packages">Packages</a> | 
-    <a href="#license">License</a> | 
-    <a href="#author">Author</a>
+    <p align="center">
+        <a href="#objective">Objective</a> | 
+        <a href="#technology">Technology</a> | 
+        <a href="#packages">Packages</a> | 
+        <a href="#license">License</a> | 
+        <a href="#author">Author</a>
    </p>
 
    <p id="#objective">
@@ -31,14 +31,14 @@
 
     <p id="#packages">
         <h2>Packages</h2>
-        <a href="https://pub.dev/packages/flutter_modular">flutter_modular</a>
-        <a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a>
-        <a href="https://pub.dev/packages/mobx">mobx</a>
-        <a href="https://pub.dev/packages/flutter_intro">flutter_intro</a>
-        <a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a>
-        <a href="https://pub.dev/packages/path_provider">path_provider</a>
-        <a href="https://pub.dev/packages/hive">hive</a>
-        <a href="https://pub.dev/packages/asuka">asuka</a>
+        <p><a href="https://pub.dev/packages/flutter_modular">flutter_modular</a></p>
+        <p><a href="https://pub.dev/packages/flutter_mobx">flutter_mobx</a></p>
+        <p><a href="https://pub.dev/packages/mobx">mobx</a></p>
+        <p><a href="https://pub.dev/packages/flutter_intro">flutter_intro</a></p>
+        <p><a href="https://pub.dev/packages/flutter_masked_text">flutter_masked_text</a></p>
+        <p><a href="https://pub.dev/packages/path_provider">path_provider</a></p>
+        <p><a href="https://pub.dev/packages/hive">hive</a></p>
+        <p><a href="https://pub.dev/packages/asuka">asuka</a></p>
     </p>
 
 Running at Flutter 1.25.0-8-3.pre - channel beta
