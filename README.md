@@ -15,7 +15,6 @@
     <a href="#objective">Objective</a> | 
     <a href="#technology">Technology</a> | 
     <a href="#packages">Packages</a> | 
-    <a href="#license">License</a> | 
     <a href="#author">Author</a>
 </p>
 
@@ -38,7 +37,7 @@
 
 <p id="#technology">
     <h2>Technology</h2>
-    <p><a href="https://flutter.dev/">Flutter</a> at 1.25.0-8-3.pre - channel beta with Dart 2.12.0</p>
+    <p><a href="https://flutter.dev/">Flutter</a> at 1.25.0-8-3.pre - channel beta with Dart 2.12.0 (build 2.12.0-0-133.7.beta)</p>
 </p>
 
 <p id="#packages">
@@ -53,5 +52,8 @@
     <a href="https://pub.dev/packages/asuka">asuka</a><br/>
 </p>
 
-Running at Flutter 1.25.0-8-3.pre - channel beta
-Dart 2.12.0 (build 2.12.0-0-133.7.beta)
+<p id="#author">
+    <h2>Author</h2>
+    <p>Developed by Rodrigo Rivas</p>
+    <a href="https://www.linkedin.com/in/rodrigo-rivas-dev/">LinkedIn</a>
+</p>
